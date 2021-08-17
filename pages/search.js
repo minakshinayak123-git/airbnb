@@ -6,7 +6,13 @@ import { format } from 'date-fns'
 const Search = () => {
   const router = useRouter()
 
-  const { location, startDate, endDate, noOfGuests } = router.query
+  const {
+    location = 'Bangalore',
+    startDate = new Date(),
+    endDate = new Date(),
+    noOfGuests = 1,
+  } = router.query
+
   const formattedStartDate = format(new Date(startDate), 'dd MMM yy')
   const formattedEndDate = format(new Date(endDate), 'dd MMM yy')
 
