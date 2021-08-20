@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/solid'
 import { useRouter } from 'next/dist/client/router'
 
-const Header = () => {
+const Header = ({ placeholder }) => {
   const [searchInput, setSearchInput] = useState('')
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
@@ -64,7 +64,7 @@ const Header = () => {
         <input
           value={searchInput}
           type='text'
-          placeholder='Start your search'
+          placeholder={placeholder || 'Start your search'}
           className='flex-grow pl-5 bg-transparent outline-none text-sm text-gray-400 placeholder-gray-400'
           onChange={(e) => setSearchInput(e.target.value)}
         />
