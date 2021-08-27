@@ -50,6 +50,9 @@ const Search = ({ searchResults }) => {
                   star={star}
                   price={price}
                   total={total}
+                  formattedStartDate={formattedStartDate}
+                  formattedEndDate={formattedEndDate}
+                  noOfGuests={noOfGuests}
                 />
               )
             )}

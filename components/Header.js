@@ -68,7 +68,7 @@ const Header = ({ placeholder }) => {
           className='flex-grow pl-5 bg-transparent outline-none text-sm text-gray-400 placeholder-gray-400'
           onChange={(e) => setSearchInput(e.target.value)}
         />
-        <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2' />
+        <SearchIcon className='hidden lg:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2' />
       </div>
       {/* right */}
       <div className='flex items-center space-x-4 justify-end text-gray-500'>

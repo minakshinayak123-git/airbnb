@@ -10,9 +10,26 @@ const InfoCard = ({
   star,
   price,
   total,
+  formattedStartDate,
+  formattedEndDate,
+  noOfGuests,
 }) => {
+  const room = (title) => {
+    router.push({
+      pathname: '/rooms',
+      query: {
+        title,
+        check_in: formattedStartDate,
+        check_out: formattedEndDate,
+        noOfGuests,
+      },
+    })
+  }
   return (
-    <div className='flex py-7 px-3 pr-6 cursor-pointer border-b hover:opacity-80 hover:shadow-lg transform transition duration-200 easy-out first: border-t'>
+    <div
+      className='flex py-7 px-3 pr-6 cursor-pointer border-b hover:opacity-80 hover:shadow-lg transform transition duration-200 easy-out first: border-t'
+      onClick={() => room(title)}
+    >
       <div className='relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0'>
         <Image
           src={img}
